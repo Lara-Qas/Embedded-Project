@@ -1,0 +1,36 @@
+main
+	__CC2DW
+		____DoICP
+	init_hw
+		motors_stop
+			PWM1_SetDuty
+			PWM2_SetDuty
+		mymsDelay
+	motors_forward
+		PWM1_SetDuty
+		PWM2_SetDuty
+	mymsDelay
+	motors_stop
+		PWM1_SetDuty
+		PWM2_SetDuty
+	raise_servo
+		myusDelay
+	adc_read_an5
+		myusDelay
+	motors_hard_right
+		PWM1_SetDuty
+		PWM2_SetDuty
+	motors_hard_left
+		PWM1_SetDuty
+		PWM2_SetDuty
+	ultrasonic_read_cm
+		myusDelay
+		Div_16X16_U
+	motors_forward_tunnel
+		Mul_32x32_U
+		Div_32x32_U
+		motors_forward
+			PWM1_SetDuty
+			PWM2_SetDuty
+	myusDelay
+interrupt
